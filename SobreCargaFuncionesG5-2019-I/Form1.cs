@@ -1,11 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace SobreCargaFuncionesG5_2019_I
@@ -16,5 +10,19 @@ namespace SobreCargaFuncionesG5_2019_I
         {
             InitializeComponent();
         }
+
+        private void btnOperar_Click(object sender, EventArgs e)
+        {
+            // Funciones mifuncion = new Funciones();
+            int suma = Funciones.Suma(int.Parse(txtbOperando1.Text), int.Parse(txtbOperando2.Text), int.Parse(txtbOperando3.Text));
+            etResultado.Text = suma.ToString();
+        }
+
+        private void btnOperar2_Click(object sender, EventArgs e)
+        {
+            int multi = Funciones.Multiplicar(int.Parse(txtOperando4.Text), int.Parse(txtOperando5.Text), int.Parse(txtOperando6.Text));
+            etResultado2.Text = multi.ToString();
+        }
     }
-}
+
+  }
